@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './Re.css'
+import Home from './Home';
+import Trail from './Trail';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import Chatbot from './Chatbot';
+import Login from './Login';
+import './Styles.css'; // Import your CSS
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/home" element={<Home/>} />
+          <Route path="/chatbot" element={<Trail />} />
+          <Route path="*" element={<h2>404 - Not Found</h2>} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
+
+

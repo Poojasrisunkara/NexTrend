@@ -1,0 +1,15 @@
+.img{
+    padding: 16vh;
+    height: 100vh;
+    max-height: 650px;
+}
+.im{
+  
+    width: 100%;
+    border-right: solid;
+   border-color: gray;
+    border-right-width: 1px;
+    justify-content: center; 
+    align-items: center;
+    display: flex;
+}
